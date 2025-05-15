@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragments.EditProfile"
+    android:padding="10dp">
+
+    <TextView
+        android:id="@+id/txt_edit_profile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/txt_edit_profile"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginTop="15dp"/>
+    <RelativeLayout
+        android:id="@+id/profile_rl"
+        android:layout_marginTop="15dp"
+        android:layout_below="@id/txt_edit_profile"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="40dp"
+            >
+            <ImageView
+                android:id="@+id/image_profile"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:src="@drawable/ic_profile_user"
+                android:scaleType="centerCrop"
+                />
+
+
+        </androidx.cardview.widget.CardView>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab_change_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_add_item"
+            />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/profile_rl"
+        android:layout_marginTop="20dp">
+
+<!--    Names-->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tf_input_names"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:boxCornerRadiusBottomStart="20dp"
+        app:boxCornerRadiusTopStart="20dp"
+        app:boxCornerRadiusBottomEnd="20dp"
+        app:boxCornerRadiusTopEnd="20dp">
+
+    <EditText
+        android:id="@+id/txt_input_names"
+        android:hint="@string/input_name"
+        android:inputType="textPersonName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+<!--    Date born-->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tf_input_date_born"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:boxCornerRadiusBottomStart="20dp"
+            android:layout_below="@+id/tf_input_names"
+            app:boxCornerRadiusTopStart="20dp"
+            app:boxCornerRadiusBottomEnd="20dp"
+            app:boxCornerRadiusTopEnd="20dp"
+            android:layout_marginTop="20dp">
+
+            <EditText
+                android:id="@+id/txt_input_date_born"
+                android:hint="@string/input_date_bor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+<!--Phone number code-->
+        <RelativeLayout
+            android:id="@+id/rl_code_phone_number"
+            android:layout_below="@id/tf_input_date_born"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp">
+
+            <com.hbb20.CountryCodePicker
+                android:id="@+id/selector_code"
+                android:gravity="center"
+                app:ccp_countryAutoDetectionPref="LOCALE_NETWORK"
+                app:ccp_rememberLastSelection="true"
+                app:ccp_defaultPhoneCode="52"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/m_button_height"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tf_code_phone_number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:boxCornerRadiusBottomStart="20dp"
+                android:layout_toEndOf="@id/selector_code"
+                app:boxCornerRadiusTopStart="20dp"
+                app:boxCornerRadiusBottomEnd="20dp"
+                app:boxCornerRadiusTopEnd="20dp">
+
+                <EditText
+                    android:id="@+id/txt_input_phone"
+                    android:inputType="phone"
+                    android:hint="@string/input_phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+        </RelativeLayout>
+<!--Button update        -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_update_profile"
+            android:layout_marginTop="30dp"
+            app:cornerRadius="15dp"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/m_button_height"
+            android:layout_below="@+id/rl_code_phone_number"
+            android:text="@string/btn_edit_profile"
+            app:icon="@drawable/ic_edit_item"
+            android:shadowColor="@color/design_default_color_on_primary"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

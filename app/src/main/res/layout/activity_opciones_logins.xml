@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".OpcionesLogins">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="30dp">
+    <ImageView
+        android:src="@drawable/login"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginBottom="80dp"
+        />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_google_email"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/m_button_height"
+            app:cornerRadius="20dp"
+            android:text="@string/input_google_email"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/txt_options_login"
+            android:layout_marginBottom="30dp"
+            />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_email"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/m_button_height"
+            app:cornerRadius="20dp"
+            android:text="@string/input_email"
+
+            />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</RelativeLayout>

@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Adds.NewAdd">
+
+    <RelativeLayout
+        android:id="@+id/rl_image_product"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/add_image"
+            android:layout_marginTop="15dp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/ic_upload_image"
+            android:layout_width="100dp"
+            android:layout_height="100dp"/>
+
+    </RelativeLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_below="@+id/rl_image_product"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_images"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            android:layout_width="match_parent"
+            tools:listitem="@layout/item_images_selected"
+            app:spanCount="4"
+            android:layout_height="wrap_content"/>
+
+<!--Product marca-->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tf_marca_fragment"
+                android:padding="20dp"
+                android:layout_below="@+id/rv_images"
+                android:layout_marginTop="10dp"
+                app:boxCornerRadiusTopEnd="8dp"
+                app:boxCornerRadiusTopStart="8dp"
+                app:boxCornerRadiusBottomEnd="8dp"
+                app:boxCornerRadiusBottomStart="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/et_marca_fragment"
+                    android:hint="@string/et_marca"
+                    android:inputType="textPersonName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+
+            </com.google.android.material.textfield.TextInputLayout>
+<!--Category-->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tf_category_fragment"
+                android:layout_below="@+id/tf_marca_fragment"
+                android:padding="20dp"
+                style="@style/Widget.Material3.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+                android:layout_marginTop="10dp"
+                app:boxCornerRadiusTopEnd="8dp"
+                app:boxCornerRadiusTopStart="8dp"
+                app:boxCornerRadiusBottomEnd="8dp"
+                app:boxCornerRadiusBottomStart="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <AutoCompleteTextView
+                    android:id="@+id/et_category_fragment"
+                    android:hint="@string/category"
+                    android:inputType="none"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+<!--Condition-->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tf_condition_fragment"
+                android:layout_below="@+id/tf_category_fragment"
+                android:padding="20dp"
+                style="@style/Widget.Material3.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+                android:layout_marginTop="10dp"
+                app:boxCornerRadiusTopEnd="8dp"
+                app:boxCornerRadiusTopStart="8dp"
+                app:boxCornerRadiusBottomEnd="8dp"
+                app:boxCornerRadiusBottomStart="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <AutoCompleteTextView
+                    android:id="@+id/et_condition_fragment"
+                    android:hint="@string/condition"
+                    android:inputType="none"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+<!--Location-->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tf_location_fragment"
+                android:layout_below="@+id/tf_condition_fragment"
+                android:padding="20dp"
+                style="@style/Widget.Material3.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+                android:layout_marginTop="10dp"
+                app:boxCornerRadiusTopEnd="8dp"
+                app:boxCornerRadiusTopStart="8dp"
+                app:boxCornerRadiusBottomEnd="8dp"
+                app:boxCornerRadiusBottomStart="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <AutoCompleteTextView
+                    android:id="@+id/et_location_fragment"
+                    android:hint="@string/location"
+                    android:inputType="none"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+<!--Price-->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tf_price_fragment"
+                android:layout_below="@+id/tf_location_fragment"
+                android:padding="20dp"
+                android:layout_marginTop="10dp"
+                app:boxCornerRadiusTopEnd="8dp"
+                app:boxCornerRadiusTopStart="8dp"
+                app:boxCornerRadiusBottomEnd="8dp"
+                app:boxCornerRadiusBottomStart="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/et_price_fragment"
+                    android:hint="@string/et_price"
+                    android:inputType="number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+<!--Title-->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tf_title_fragment"
+                android:layout_below="@+id/tf_price_fragment"
+                android:padding="20dp"
+                android:layout_marginTop="10dp"
+                app:boxCornerRadiusTopEnd="8dp"
+                app:boxCornerRadiusTopStart="8dp"
+                app:boxCornerRadiusBottomEnd="8dp"
+                app:boxCornerRadiusBottomStart="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/et_title_fragment"
+                    android:hint="@string/et_title"
+                    android:inputType="textPersonName|textCapSentences"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+<!--Description-->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tf_description_fragment"
+                android:layout_below="@+id/tf_title_fragment"
+                android:padding="20dp"
+                android:layout_marginTop="10dp"
+                app:boxCornerRadiusTopEnd="8dp"
+                app:boxCornerRadiusTopStart="8dp"
+                app:boxCornerRadiusBottomEnd="8dp"
+                app:boxCornerRadiusBottomStart="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/et_description_fragment"
+                    android:hint="@string/et_description"
+                    android:inputType="textMultiLine|textCapSentences"
+                    android:gravity="top|start"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_new_publication"
+                android:layout_width="match_parent"
+                android:layout_below="@+id/tf_description_fragment"
+                android:layout_alignParentBottom="true"
+                android:layout_height="wrap_content"
+                app:cornerRadius="15dp"
+                android:layout_margin="15dp"
+                android:textAllCaps="true"
+                android:text="@string/btn_new_publication"/>
+        </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+
+
+</RelativeLayout>
+

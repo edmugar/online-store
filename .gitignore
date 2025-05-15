@@ -1,0 +1,35 @@
+# built application files
+*.apk
+*.ap_
+
+# Mac files
+.DS_Store
+
+# files for the dex VM
+*.dex
+
+#Java class files
+*.class
+
+# Generated files
+bin/
+gen/
+
+# Ignore gradle files
+.gradle/
+build/
+
+# Android Studio/IDEA
+*.iml
+.idea/
+.kotlin/
+
+# Local configuration file(sdk path,etc)
+/local.properties
+
+/captures
+.externalNativeBuild
+.cxx
+
+# private files
+google-services.json
