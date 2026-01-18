@@ -64,7 +64,7 @@ class Registro_email : AppCompatActivity() {
     }
 
     private fun addInfoDB() {
-        progressDialog.setMessage("Guardado información")
+        progressDialog.setMessage("Guardando información")
 
         val time = Constants.getDeviceTime()
         val userEmail = firebaseAuth.currentUser!!.email

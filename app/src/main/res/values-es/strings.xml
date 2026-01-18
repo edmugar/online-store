@@ -1,0 +1,69 @@
+<resources>
+    <string name="app_name" translatable="false">Online Store</string>
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Galeria</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="item_home">Home</string>
+    <string name="item_chat">Chats</string>
+    <string name="item_sale">Ventas</string>
+    <string name="item_my_adds">Mis anuncios</string>
+    <string name="item_account">Cuenta</string>
+
+    <string name="Title_R1">Titulo</string>
+    <string name="input_email">Ingresar con correo</string>
+    <string name="input_google_email">Ingrese con Google</string>
+
+    <!--Variables del panel de login-->
+    <string name="txt_login">Login de usuario</string>
+    <string name="et_email">Email</string>
+    <string name="et_password">Contraseña</string>
+    <string name="btn_in">Ingresar</string>
+    <string name="txt_no_account">¿No tiene una cuenta?</string>
+    <string name="txt_sign_up">Registrarme</string>
+    <string name="txt_options_login">Ingrese con su cuenta personal de Google</string>
+
+    <string name="txt_sign_up_new_use">Registro de usuario</string>
+    <string name="et_repeat_password">Repetir contraseña</string>
+    <string name="btn_sign_up">Registrarme</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!--    User profile-->
+    <string name="txt_profile">Perfil de usuario</string>
+    <string name="txt_information">Información:</string>
+    <string name="txt_name">Nombres:</string>
+    <string name="tv_names">Nombres completos</string>
+    <string name="txt_email">Email:</string>
+    <string name="tv_email">Email@dominio.com</string>
+    <string name="txt_time_born">Fecha de nacimiento</string>
+    <string name="tv_born">dd/mm/aaaa</string>
+    <string name="txt_member">Miembro desde</string>
+    <string name="tv_member">dd/mm/aaaa</string>
+    <string name="txt_phone_number">Teléfono</string>
+    <string name="tv_phone_number">99999999</string>
+    <string name="txt_account_state">Estado de cuenta:</string>
+    <string name="tv_estado_cuenta">No verificado</string>
+
+    <string name="btn_text_close_session">Cerrar sesión</string>
+    <string name="btn_edit_profile">Editar perfil</string>
+    <string name="txt_options">Opciones</string>
+
+    <!--    Edit profile-->
+    <string name="txt_edit_profile">Editar perfil</string>
+    <string name="input_name">Nombres completos</string>
+    <string name="input_date_bor">Fecha de nacimiento</string>
+    <string name="input_phone_number">00</string>
+    <string name="input_phone">Teléfono</string>
+    <string name="btn_update">Actualizar</string>
+
+    <!--    New publication-->
+    <string name="et_marca">Nombre de la marca</string>
+    <string name="category">Categoría</string>
+    <string name="condition">Condición</string>
+    <string name="location">Locación</string>
+    <string name="et_price">Precio</string>
+    <string name="et_title">Titulo</string>
+    <string name="et_description">Descripción</string>
+    <string name="btn_new_publication">Crear anuncio</string>
+
+</resources>
