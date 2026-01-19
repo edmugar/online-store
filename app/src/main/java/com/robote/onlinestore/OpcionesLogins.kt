@@ -149,19 +149,19 @@ class OpcionesLogins : AppCompatActivity() {
 
         val dayTime = Calendar.HOUR_OF_DAY
 
-           val greeting = when (dayTime) {
-                in 0..12 -> {
-                    R.string.good_morning
-                }
-
-                in 13..22 -> {
-                    R.string.good_afternoon
-                }
-
-                else -> {
-                    R.string.good_night
-                }
+        val greeting = when (dayTime) {
+            in 0..12 -> {
+                R.string.good_morning
             }
+
+            in 13..22 -> {
+                R.string.good_afternoon
+            }
+
+            else -> {
+                R.string.good_night
+            }
+        }
         binding.loginGreeting.setText(greeting)
     }
 }
