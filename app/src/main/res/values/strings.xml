@@ -25,6 +25,9 @@
     <string name="txt_sign_up_new_use">User </string>
     <string name="et_repeat_password">Repeat password</string>
     <string name="btn_sign_up">Log in</string>
+    <string name="good_morning">Good morning</string>
+    <string name="good_afternoon">Good afternoon</string>
+    <string name="good_night">Good night</string>
 
     <string name="hello_blank_fragment">Hello blank fragment</string>
 

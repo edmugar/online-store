@@ -14,6 +14,7 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.GoogleAuthProvider
 import com.google.firebase.database.FirebaseDatabase
 import com.robote.onlinestore.Opciones_login.Login_email
+import java.util.Calendar
 
 class OpcionesLogins : AppCompatActivity() {
 
@@ -28,7 +29,7 @@ class OpcionesLogins : AppCompatActivity() {
         setContentView(binding.root)
 
 
-
+        loginGreeting()
         firebaseAuth = FirebaseAuth.getInstance()
         sessionCheck()
         val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
@@ -141,5 +142,26 @@ class OpcionesLogins : AppCompatActivity() {
             startActivity(Intent(this, MainActivity::class.java))
             finishAffinity()
         }
+    }
+
+    //Login greeting
+    private fun loginGreeting() {
+
+        val dayTime = Calendar.HOUR_OF_DAY
+
+           val greeting = when (dayTime) {
+                in 0..12 -> {
+                    R.string.good_morning
+                }
+
+                in 13..22 -> {
+                    R.string.good_afternoon
+                }
+
+                else -> {
+                    R.string.good_night
+                }
+            }
+        binding.loginGreeting.setText(greeting)
     }
 }

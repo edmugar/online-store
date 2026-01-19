@@ -25,6 +25,9 @@
     <string name="txt_sign_up_new_use">Registro de usuario</string>
     <string name="et_repeat_password">Repetir contraseña</string>
     <string name="btn_sign_up">Registrarme</string>
+    <string name="good_morning">Buenos días</string>
+    <string name="good_afternoon">Buenas tardes</string>
+    <string name="good_night">Buenas noches</string>
 
     <string name="hello_blank_fragment">Hello blank fragment</string>
 

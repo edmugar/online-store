@@ -13,7 +13,19 @@
         android:orientation="vertical"
         android:gravity="center"
         android:padding="30dp">
-    <ImageView
+
+        <TextView
+            android:id="@+id/login_greeting"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="30dp"
+            android:textSize="40sp"
+            android:layout_marginBottom="30dp"
+            android:textStyle="bold"
+            android:textAlignment="center"
+        />
+
+        <ImageView
         android:src="@drawable/login"
         android:layout_width="80dp"
         android:layout_height="80dp"
@@ -26,13 +38,6 @@
             android:layout_height="@dimen/m_button_height"
             app:cornerRadius="20dp"
             android:text="@string/input_google_email"
-            />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/txt_options_login"
-            android:layout_marginBottom="30dp"
             />
 
         <com.google.android.material.button.MaterialButton
